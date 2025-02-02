@@ -1,0 +1,12 @@
+(goal
+  (and
+    (on bottle_e6199818-5446-4e6e-884d-ed52ebf9cede coffee_table_107c28dd-7099-4199-baa1-c001ff274111)
+    (on watch_207106d5-67e0-4d41-bb3c-ab32a5facb0f garbage_can_b9bd798a-59f1-4751-bf94-1e1dec6eb00f)
+    (on knife_72628628-ae74-4a3a-8e30-14da4fd3c284 garbage_can_b9bd798a-59f1-4751-bf94-1e1dec6eb00f)
+    (on spray_bottle_18d8b020-e789-497b-b516-222ea4c7dc15 garbage_can_b9bd798a-59f1-4751-bf94-1e1dec6eb00f)
+    (on bottle_ce05bb4d-8437-44ca-9f2d-d4afa710fcdb garbage_can_b9bd798a-59f1-4751-bf94-1e1dec6eb00f)
+    (on box_of_tissues_766bcda4-74dc-4346-a078-ea16a42e99d6 garbage_can_b9bd798a-59f1-4751-bf94-1e1dec6eb00f)
+    (on pencil_7a2ba6cf-5419-4c41-a89e-afbeea07fd60 counter_top_60c0506d-0b90-4c99-bf46-f0505ffb40fb)
+  )
+)
+```

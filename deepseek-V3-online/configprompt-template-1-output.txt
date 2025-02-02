@@ -1,0 +1,3 @@
+(:goal 
+    (contain wine_bottle_d054d917-4f6e-4307-a44b-f0c78bc112eb garbage_can_bc12b450-2a5d-4767-a16c-415872fe3e08)
+)

@@ -1,0 +1,38 @@
+```pddl
+(define (problem test-problem)
+  (:domain blocks)
+  (:objects
+    object-1 object-2 object-3 object-4 object-5 object-6 object-7 object-8 object-9 object-10 object-11 object-12
+object-13 object-14 object-15 object-16 object-17 object-18 object-19 object-20 object-21 object-22 object-23
+object-24 object-25 container-1 container-2 container-3 container-4 surface-1 surface-2 robo)
+  (:goal
+    (and
+      (in-container object-1 container-1)
+      (on-top-of object-2 container-1)
+      (on-top-of object-3 container-1)
+      (on-top-of object-4 container-1)
+      (on-top-of object-5 container-1)
+      (on-top-of object-6 container-1)
+      (in-container object-7 container-2)
+      (on-top-of object-8 container-2)
+      (on-top-of object-9 container-2)
+      (on-top-of object-10 container-2)
+      (on-top-of object-11 container-2)
+      (in-container object-12 container-3)
+      (on-top-of object-13 container-3)
+      (on-top-of object-14 container-3)
+      (in-container object-15 container-4)
+      (on-top-of object-16 container-4)
+      (on-top-of object-17 container-4)
+      (on-top-of object-18 container-4)
+      (on-surface object-19 surface-1)
+      (on-surface object-20 surface-1)
+      (on-surface object-21 surface-1)
+      (on-surface object-22 surface-1)
+      (on-surface object-23 surface-2)
+      (on-surface object-24 surface-2)
+      (on-surface object-25 surface-2)
+      (free robo)
+    )
+  )
+)

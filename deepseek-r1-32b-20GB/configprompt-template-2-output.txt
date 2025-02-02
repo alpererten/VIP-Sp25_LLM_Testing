@@ -1,0 +1,12 @@
+(goal (and
+    (at cup1 sink1)
+    (at cup2 sink1)
+    (at towel_roll counter_top)
+    (at soda table1)  ; Assuming soda stays on the table or move to sink if needed for cleaning.
+    (at spray_bottle sink1)
+    (at fork sink1)
+    (at tomato storage_area)  ; If a storage area is defined, else perhaps stay on table.
+    (at grapes storage_area)
+    (at spoon sink1)
+    (at knife sink1)
+))

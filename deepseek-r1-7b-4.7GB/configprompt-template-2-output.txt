@@ -1,0 +1,90 @@
+To create a PDDL goal specification based on the provided code, we first declare the domain and then define each
+action along with its parameters and effects. Here is the structured approach:
+
+### Domain Declaration
+
+```pdl
+:domain
+  :objects
+    (shelf "45bd0ad9-afcb-476e-85b0-b2b6d80f65a5")
+    (sink "c82c6197")
+    (cup "99edc9e4-5666-4fbb-8ad6-39663e42c3ef")
+    (tabletop)
+  :relations
+    (has_object_on "Cup" shelf)
+    (has_object_on "Tomato bowl" tabletop)
+    (contains "SINK" cup)
+    (on "Fork" "Cup" shelf)
+  :actions
+    (fill_sink_with_water
+      (?time_unit "1")
+      (precondition (not (water_empty "c82c6197")))
+      (effect ((water_full "c82c6197") true))
+    )
+```
+
+### Action Definitions
+
+```pdl
+  (put_water_in_cup
+    (?time_unit "1")
+    (precondition (and (water_empty "c82c6197") (empty "cup")))
+    (effect ((filled "cup") true)
+             ((water_level "c82c6197") 100))
+  )
+
+  (place_object_on_shelf
+    (?object)
+    (?shelf)
+    (?position (top shelf))
+    (precondition (has_object_on ?object ?shelf))
+    (effect (
+      (located "?object" ?shelf)
+      (order "?object" ?position "shelf")
+    )
+  )
+
+  (move_object
+    (?object)
+    (?from_location)
+    (?to_location)
+    (?time_unit "1")
+    (precondition (can_move ?object from_location))
+    (effect (
+      (located "?object" ?to_location)
+      (removed "?object" from_location)
+    )
+  )
+
+  (pour_from_to
+    (?source_container)
+    (?destination_container)
+    (?volume scalar-100ml)
+    (precondition (has_liquid ?source_container)
+                  (not (full ?destination_container)))
+    (effect (
+      (amount ?source_container (- ?volume))
+      (amount ?destination_container (+ ?volume))
+    )
+  )
+
+  (use_utensil
+    (?utensil)
+    (?item)
+    (?time_unit "1")
+    (precondition (has_item_on ?utensil ?item))
+    (effect (
+      (eaten "?item") true
+      (empty ?utensil) true
+    )
+  )
+
+  (cut_with_fork
+    (?item)
+    (precondition (exists "(fork)" action))
+    (effect (
+      (eaten "?item") true
+      (position "CUT" ?item)
+    )
+  )
+```

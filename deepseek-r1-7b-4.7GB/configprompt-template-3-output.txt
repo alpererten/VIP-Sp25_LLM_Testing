@@ -1,0 +1,16 @@
+```pdl
+(:
+  (init
+    ; Preconditions for each close action
+    (close coffee_table_107c28dd-7099... bottle_e6199818...)
+    (close garbage_can_b9bd798a... knife...)
+    (close garbage_can_b9bd798a... spray_bottle...)
+    (close garbage_can_b9bd798a... bottle_ce05bb4d...)
+    (close garbage_can_b9bd798a... box_of_tissues...)
+    (pencil_7a2ba6cf-5419... )
+  )
+
+  ; Preconditionals for specific resources
+  (precondition oil_d87e945e-614c...)
+)
+```

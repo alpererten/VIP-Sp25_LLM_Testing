@@ -1,0 +1,14 @@
+(goal
+  (and
+    (on mug1 table1)
+    (on mug2 table1)
+    (on book1 table2)
+    (on book2 table2)
+    (at robby location1)
+    (holding robby nothing)
+    (not (on cup1 garbage_can))
+    (not (on bottle1 garbage_can))
+    (on smartphone table3)
+  )
+)
+```
